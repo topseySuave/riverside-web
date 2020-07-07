@@ -4,13 +4,17 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start:dev": "concurrently \"tailwindcss build ./assets/scss/style.scss -o ./pages/output.css\" \"yarn dev\" "
   },
   "dependencies": {
+    "concurrently": "^5.2.0",
     "next": "latest",
+    "next-images": "^1.4.0",
     "node-sass": "^4.14.1",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "tailwindcss": "^1.4.6"
   },
   "license": "ISC"
 }
